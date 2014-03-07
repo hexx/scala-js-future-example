@@ -16,7 +16,6 @@ lazy val server = project.settings(
 lazy val client = {
   project.settings(
     baseSettings ++ scalaJSSettings ++ Seq(
-      ScalaJSKeys.loggingConsole := Option(new MyLoggerConsole(streams.value.log)),
       libraryDependencies ++= Seq(
         "org.scala-lang.modules.scalajs" %% "scalajs-dom" % "0.2",
         "org.scala-lang.modules.scalajs" %% "scalajs-jasmine-test-framework" % scalaJSVersion % "test",
